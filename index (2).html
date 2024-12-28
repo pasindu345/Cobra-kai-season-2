@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px; /* Reduced padding for mobile compatibility */
+            width: 90%; /* Adjusted for smaller screens */
+            max-width: 600px; /* Limits max width for larger screens */
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 12px 20px; /* Adjusted button size */
+            font-size: 16px; /* Slightly smaller font */
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #timer {
+            font-size: 20px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .links {
+            display: none;
+        }
+
+        .links a {
+            display: block;
+            margin: 10px 0; /* Adjusted spacing */
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px; /* Smaller font */
+            color: white;
+            border-radius: 8px;
+        }
+
+        .links .red {
+            background-color: red;
+        }
+
+        .links .blue {
+            background-color: blue;
+        }
+
+        .links .green {
+            background-color: green;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px; /* Reduced padding for small screens */
+                width: 95%; /* Almost full width for mobile */
+            }
+
+            button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            #timer {
+                font-size: 18px;
+            }
+
+            .links a {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><b>Notes:</b></p>
+        <ul style="text-align: left;">
+            <li><b>English:</b> Click the button below to go to the ad link. After 10 seconds, download links will appear.</li>
+            <li><b>සිංහල:</b> පහතින් ඇති බොත්තම ක්ලික් කරන්න. ඔබ ප්‍රචාරක සබැඳියට යන අතර, තත්පර 10 කට පසු බාගත කිරීම් සබැඳි දිස්වෙයි.</li>
+        </ul>
+        <button id="clickButton">Click</button>
+        <div id="timer">Time: <span id="countdown">10</span></div>
+        <div class="links">
+            <a href="https://example.com/file1" class="red">Download Link 1</a>
+            <a href="https://example.com/file2" class="blue">Download Link 2</a>
+            <a href="https://example.com/file3" class="green">Download Link 3</a>
+        </div>
+    </div>
+
+    <script>
+        const button = document.getElementById('clickButton');
+        const timer = document.getElementById('timer');
+        const countdown = document.getElementById('countdown');
+        const links = document.querySelector('.links');
+
+        button.addEventListener('click', () => {
+            // Redirect to Adsterra link
+            window.location.href = "https://www.profitablecpmrate.com/m8cijrbt0b?key=22574d5c2af69ed44781e0b7906c4ded";
+
+            // Start timer after redirect
+            button.style.display = 'none';
+            timer.style.display = 'block';
+
+            let timeLeft = 10;
+            const interval = setInterval(() => {
+                timeLeft--;
+                countdown.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    timer.style.display = 'none';
+                    links.style.display = 'block';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
